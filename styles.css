@@ -64,15 +64,3 @@ body {
     border: 2px solid red;
 }
 
-.piece.king::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 20px;
-    background-image: url('crown.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
