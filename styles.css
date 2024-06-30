@@ -1,10 +1,15 @@
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+#status-bar {
+    margin: 20px;
+    font-size: 24px;
 }
 
 #game-board {
@@ -44,4 +49,30 @@ body {
 .piece.white {
     background-color: #fff;
     border: 2px solid #000;
+}
+
+.piece.selected {
+    border: 2px solid yellow;
+}
+
+.cell.valid-move {
+    background-color: green;
+}
+
+.piece.king {
+    position: relative;
+    border: 2px solid red;
+}
+
+.piece.king::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url('crown.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
