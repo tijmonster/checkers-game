@@ -104,16 +104,6 @@ function getValidMoves(piece) {
     return moves;
 }
 
-/**
- * Calculates all valid moves for a king piece in a checkers game.
- * Updates the provided `moves` array with possible destinations.
- * @param {number} pieceRow - The starting row of the king piece.
- * @param {number} pieceCol - The starting column of the king piece.
- * @param {number} rowOffset - The row direction to check for moves.
- * @param {number} colOffset - The column direction to check for moves.
- * @param {string} color - The color of the king piece.
- * @param {Array} moves - An array to store the valid moves.
- */
 
 function addKingMoves(pieceRow, pieceCol, rowOffset, colOffset, color, moves) {
     const addMove = (r, c, captured) => moves.push({ row: r, col: c, captured });
@@ -147,16 +137,7 @@ function addKingMoves(pieceRow, pieceCol, rowOffset, colOffset, color, moves) {
         newCol += colOffset;
     }
 }
-/**
- * Checks if a move from a starting position to an ending position on a checkers board is valid.
- * @param {number} startRow - The starting row of the piece.
- * @param {number} startCol - The starting column of the piece.
- * @param {number} endRow - The target row for the move.
- * @param {number} endCol - The target column for the move.
- * @param {string} color - The color of the piece ('white' or 'black').
- * @param {boolean} [isKing=false] - A boolean indicating if the piece is a king. Defaults to false.
- * @returns {boolean} Returns true if the move is valid, otherwise false.
- */
+
 function isValidMove(startRow, startCol, endRow, endCol, color, isKing = false) {
     const withinBoundaries = endRow >= 0 && endRow < boardSize && endCol >= 0 && endCol < boardSize;
     if (!withinBoundaries) {
