@@ -1,2 +1,1 @@
 # checkers-game
-bitacademy
